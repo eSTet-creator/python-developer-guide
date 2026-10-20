@@ -11,5 +11,14 @@ def get_list_tips():
         "Додавання елемента: my_list.append(4)"
     ]
 
+print('YA SHARU')
+# Створення словника
+user = {"name": "Олена", "age": 25, "city": "Київ"}
+
+# Отримання значення за ключем
+print(user["name"])  # Виведе: Олена
+
+# Безпечне отримання (якщо ключа немає, поверне None замість помилки)
+print(user.get("email"))  # Виведе: None
 if __name__ == "__main__":
     show_menu()
