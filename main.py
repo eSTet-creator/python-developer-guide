@@ -11,5 +11,7 @@ def get_list_tips():
         "Додавання елемента: my_list.append(4)"
     ]
 
+print('YA SHARU')
+
 if __name__ == "__main__":
     show_menu()
