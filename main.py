@@ -12,7 +12,6 @@ def get_list_tips():
         "Додавання елемента: my_list.append(4)"
     ]
 
-
 def get_dict_tips():
     return [
         "Створення словника: my_dict = {'key': 'value'}",
@@ -43,5 +42,15 @@ def main():
             print("❌ Невірний вибір. Будь ласка, введіть 1, 2 або 0.")
 
 
+
+print('YA SHARU')
+# Створення словника
+user = {"name": "Олена", "age": 25, "city": "Київ"}
+
+# Отримання значення за ключем
+print(user["name"])  # Виведе: Олена
+
+# Безпечне отримання (якщо ключа немає, поверне None замість помилки)
+print(user.get("email"))  # Виведе: None
 if __name__ == "__main__":
     main()
