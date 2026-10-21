@@ -9,14 +9,16 @@ def show_menu():
 def get_list_tips():
     return [
         "Створення списку: my_list = [1, 2, 3]",
-        "Додавання елемента: my_list.append(4)"
+        "Додавання елемента: my_list.append(4)",
+        "Вставка за індексом: my_list.insert(0, 'новий')"  # Додано новий рядок
     ]
 
 
 def get_dict_tips():
     return [
         "Створення словника: my_dict = {'key': 'value'}",
-        "Безпечне отримання елемента: my_dict.get('key')"
+        "Безпечне отримання елемента: my_dict.get('key')",
+        "Оновлення або додавання: my_dict.update({'new_key': 5})"  # Додано новий рядок
     ]
 
 
@@ -45,3 +47,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
