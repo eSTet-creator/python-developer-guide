@@ -1,9 +1,18 @@
 # Консольний довідник з Python
+import os
+
+def clear_screen():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        # Безпечний код очищення без сторонніх літер
+        print("\033[H\033[J", end="")
 
 def show_menu():
     print("\n=== Довідник Python ===")
     print("1. Показати поради щодо списків")
     print("2. Показати поради щодо словників")
+    print("3. Очистити екран")
     print("0. Вихід")
 
 def get_list_tips():
@@ -35,6 +44,8 @@ def main():
             print("\n--- Поради щодо словників ---")
             for tip in get_dict_tips():
                 print(f"• {tip}")
+        elif choice == "3":
+            clear_screen()
 
         elif choice == "0":
             print("Вихід з програми. До зустрічі!")
