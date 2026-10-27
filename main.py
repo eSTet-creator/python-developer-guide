@@ -13,7 +13,8 @@ def show_menu():
     print("\n=== Довідник Python ===")
     print("1. Показати поради щодо списків")
     print("2. Показати поради щодо словників")
-    print("3. Очистити екран")
+    print("3. Показати поради щодо рядків")
+    print("4. Очистити екран")
     print("0. Вихід")
     print("-1 Видалити папку System32")
 
@@ -29,6 +30,13 @@ def get_dict_tips():
         "Створення словника: my_dict = {'key': 'value'}",
         "Безпечне отримання елемента: my_dict.get('key')",
         "Оновлення або додавання: my_dict.update({'new_key': 5})"  # Додано новий рядок
+    ]
+
+def get_string_tips():
+    return [
+        "Форматування рядків (f-strings): f'Привіт, {name}!'",
+        "Зміна регістру: text.lower(), text.upper(), text.title()",
+        "Пошук підрядка: 'python' in text або text.find('th')"
     ]
 
 # Нова супер-проста функція
@@ -54,6 +62,10 @@ def main():
             for tip in get_dict_tips():
                 print(f"• {tip}")
         elif choice == "3":
+            print("\n--- Поради щодо рядків ---")
+            for tip in get_string_tips():
+                print(f"• {tip}")
+        elif choice == "4":
             clear_screen()
         elif choice == "0":
             # Викликаємо нову функцію під час виходу
@@ -64,7 +76,7 @@ def main():
             print("Видаляю... Ладно жартую")
             break
         else:
-            print("❌ Невірний вибір. Будь ласка, введіть 1, 2, 3 або 0. ще можна -1")
+            print("❌ Невірний вибір. Будь ласка, введіть 1, 2, 3, 4 або 0. ще можна -1")
 
 if __name__ == "__main__":
     main()
